@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="script.js" ></script>
+    <title>Xena Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: darkgray;
+        }
+        input {
+            text-transform: uppercase;
+        }
+        table {
+            width: 20%;
+            margin: 1cm;
+			border: 2px solid black;
+			padding: 1cm;
+			border-radius: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="bannerOverlay.png" height="100px" width="350px" >
+    </div>
+    <div>
+        <form name="register" onsubmit="validateForm()">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name" required></td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td><input type="text" name="age" required></td>
+                </tr>
+                <tr>
+                    <td>Email ID:</td>
+                    <td><input type="text" name="email" required></td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td>
+                        <input list="venue" id="choice" name="choice" />
+                        <datalist id="venue">
+                            <option selected value="Bangalore">
+                            <option value="Rajkot">
+                            <option value="Vijag">
+                        </datalist>
+                    </td>
+                </tr>
+                <tr style="height: 12pt;"></tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="submit" value="Submit"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

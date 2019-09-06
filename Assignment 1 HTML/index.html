@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TopGear HTML Assignment 1</title>
+        <script src="script.js" ></script>
+    </head>
+    <body>
+        <p>Stock Traiding</p>
+        <table style="background-color: darkgrey" border="1px">
+            <tr>
+                <td><strong>TICKER</strong></td>
+                <td><strong>PRICE</strong></td>
+            </tr>
+            <tr>
+                <td>WIPRO</td>
+                <td>298.45</td>
+            </tr>
+            <tr>
+                <td>INFY</td>
+                <td>9949.95</td>
+            </tr>
+            <tr>
+                <td>TCS</td>
+                <td>2713.70</td>
+            </tr>
+            <tr>
+                <td>TECHM</td>
+                <td>485.85</td>
+            </tr>
+        </table>
+        <p style="font-size: 24px"><strong>Stock Traiding</strong></p>
+        <br>
+        <table style="background-color: darkgrey" border="1px">
+            <tr>
+                <td>Ticker</td>
+                <td><input type=text id="ticker" placeholder="enter ticker"></td>
+            </tr>
+            <tr>
+                <td>Quantity</td>
+                <td><input type=number id="quantity" placeholder="enter quantity"></td>
+            </tr>
+            <tr>
+                <td><input type=submit onclick="calculateQuantity()" title="Submit"> </td>
+                <td><input type="text" id="result" readonly></td>
+            </tr>
+        </table>
+    </body>
+</html>
