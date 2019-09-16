@@ -2,8 +2,25 @@
 <html>
     <head>
         <title>TopGear HTML Assignment 1</title>
-        <script src="script.js" ></script>
     </head>
+    <script>
+        var tickerPrice = {
+            WIPRO: 298.45,
+            INFY: 9949.95,
+            TCS: 2713.70,
+            TECHM: 485.85
+        }
+
+        function calculateQuantity(){
+            var tickerSelected = document.getElementById("ticker").value.toUpperCase()
+            var quantitySelected = parseInt(document.getElementById("quantity").value, 10)
+            if ((tickerPrice.hasOwnProperty(tickerSelected)) && (quantitySelected % 10 == 0 )) {
+                document.getElementById("result").value = tickerPrice[tickerSelected] * quantitySelected
+            }else{
+                document.getElementById("result").value = "Bad input"
+            }
+        }
+    </script>
     <body>
         <p>Stock Traiding</p>
         <table style="background-color: darkgrey" border="1px">

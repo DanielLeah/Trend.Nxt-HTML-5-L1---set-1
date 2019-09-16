@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="script.js" ></script>
     <title>Xena Events</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -21,6 +18,22 @@
 			border-radius: 20%;
         }
     </style>
+    <script>
+        function validateForm() {
+            var name = document.forms['register']['name'].value;
+            var age = document.forms['register']['age'].value;
+            var email = document.forms['register']['email'].value;
+            if(!name.match(/^[A-Za-z]+$/)) {
+				alert("Name:\t* CHARACTERS ONLY");
+			}
+            if(parseInt(age) < 18) {
+                alert("Age:\t* EQUAL OR GREATER THAN 18");
+            }
+            if(!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+                alert("Email ID:\t* INVALID EMAIL ID");
+            }
+        }
+    </script>
 </head>
 <body>
     <div>
@@ -44,12 +57,11 @@
                 <tr>
                     <td>City:</td>
                     <td>
-                        <input list="venue" id="choice" name="choice" />
-                        <datalist id="venue">
-                            <option selected value="Bangalore">
-                            <option value="Rajkot">
-                            <option value="Vijag">
-                        </datalist>
+                        <select>
+                            <option value="bangalore" selected>Bangalore</option>
+                            <option value="rajkot">Rajkot</option>
+                            <option value="vijag">Vijag</option>
+                        </select>
                     </td>
                 </tr>
                 <tr style="height: 12pt;"></tr>
